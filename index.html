@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Program Horoscope</h1>
+<button onclick="myFunction()">Click Me!</button>
+<p> Keberuntungan Anda Hari ini:</p>
+<p>_____________________________________________________________________________</p>
+  <div id="demo"></div>
+ 
+<script>
+//Latihan DOM Week3 Shaldzabila w/Progate Advance Class 05/10/21
+function myFunction() {
+const randomNumber = Date.now();
+let hasill=randomNumber%9;
+let hasil=hasill%2;
+let fortune;
+if(hasill==0){
+	//fortune=`Hebat ${hasill} `;
+    fortune="Hebat!";
+    //console.log(`your fortune: ${fortune} berdasarkan ${hasiil}`);
+    }
+    	else if(hasil==0){
+        	//fortune=`boleh juga ${hasill} `;
+            fortune="boleh juga";
+            //console.log(`your fortune: ${fortune} berdasarkan ${hasiil}`);
+            }
+            	else{
+                	//fortune=`mengerikan ${hasill} `;
+                    fortune="Mengerikan!";
+                    //console.log(`your fortune: ${fortune} berdasarkan ${hasiil}`);
+                    }
+            
+const divDemo = document.getElementById("demo");
+
+// membuat sebuah elemen "p"
+   const paragraf = document.createElement("p");
+   paragraf.innerHTML = fortune;
+
+// menambahkan element "p" kedalam elemen "div"
+   divDemo.append(paragraf);
+   
+    }
+    
+</script>
+
+</body>
+</html>
